@@ -57,7 +57,7 @@ h2 {
         float: left;
         width: 50%;
         position: relative;
-        overflow: auto;
+        overflow: scroll;
     }
 
     .col-3 {
