@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+article {
+    background-color:darkgray;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5px;
+    margin-top: 0px;
+    overflow: hidden;
+    height: 1000px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+section {
+    box-sizing: border-box;
+    margin: 0px;
+
+    position: relative;
+}
+
+h2 {
+    position: center;
+    text-align: center;
+}
+
+#row {
+    width: 100%;
+    margin-left: 0; 
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .col-1, .col-2, .col-3 {
+        float: none; /* Remove float to prevent horizontal layout */
+        width: 100%; /* Set width to 100% for each section to stack vertically */
+        position: relative; /* Maintain relative positioning for potential internal elements */
+        margin: 10px 0; /* Maintain margin for spacing, but set top and bottom margins only */
+        overflow: auto; 
+    }
+}
+
+/* Tablet View */ 
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-1, .col-2 {
+        float: left;
+        width: 50%;
+        position: relative;
+        overflow: auto;
+    }
+
+    .col-3 {
+        width: 100%;
+        clear: both; 
+        position: relative;
+        margin-top: 20px; 
+        overflow: auto;
+    }
+} 
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .col-1, .col-2, .col-3 {
+        float: left;
+        width: 100%;
+        position: relative;
+        margin-left: 0;
+        overflow: auto;
+    }
+}
